@@ -7,68 +7,6 @@
     tools:context=".MainActivity">
 
     <!-- @string/var_name will fetch the string value from res/values/strings.xml-->
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="113dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginRight="93dp"
-        android:ems="10"
-        android:hint="Enter name"
-        android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintEnd_toStartOf="@+id/check_good"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Button
-        android:id="@+id/buttonTalk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Talk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check_good" />
-
-    <TextView
-        android:id="@+id/text_num"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:text="0"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_add"
-        app:layout_constraintHorizontal_bias="0.445"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonTalk" />
-
-    <Button
-        android:id="@+id/btn_add"
-        android:layout_width="77dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
-        android:text="+1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonTalk" />
-
-    <Spinner
-        android:id="@+id/spinner_greeting"
-        android:layout_width="169dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -80,23 +18,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_outline_sentiment_satisfied_24" />
 
-    <CheckBox
-        android:id="@+id/check_good"
-        android:layout_width="84dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:onClick="onCheckboxClicked"
-        android:text="isGood"
-        app:layout_constraintEnd_toStartOf="@+id/spinner_greeting"
+    <Button
+        android:id="@+id/btn_forms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:text="Forms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="52dp" />
+    <Button
+        android:id="@+id/btn_intents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intents"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_forms" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
