@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -22,6 +24,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //use tag in Log.d to find the log
         Log.d("Cybrary", "onCreate");
+
+        //SHARED PREFERENCES
+        SharedPreferences sharedPreferences = getSharedPreferences("cybrarySettings", Context.MODE_PRIVATE);
+        String check = sharedPreferences.getString("firstRun", "true");
+        if (check.equals("true")){
+            Toast.makeText(this, "Welcome to my app", Toast.LENGTH_SHORT).show();
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("firstRun", "false");
+            editor.apply();
+        }
+        else{
+            Toast.makeText(this, "Welcome back", Toast.LENGTH_SHORT).show();
+        }
 
         //ACTIVITY - FORMS
         Button btn_forms = findViewById(R.id.btn_forms);
@@ -44,14 +59,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //MENU
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.home_menu, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
