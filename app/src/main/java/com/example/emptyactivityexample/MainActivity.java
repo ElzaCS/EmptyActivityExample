@@ -56,12 +56,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //ACTIVITY - IGRIDVIEW
+        //ACTIVITY - GRIDVIEW
         Button btn_gridview = findViewById(R.id.btn_gridview);
         btn_gridview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, activity_gridview.class);
+                startActivity(intent);
+            }
+        });
+        //ACTIVITY - STATES
+        Button btn_states = findViewById(R.id.btn_states);
+        btn_states.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Activity_states.class);
                 startActivity(intent);
             }
         });
