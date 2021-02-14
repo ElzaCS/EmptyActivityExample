@@ -56,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //ACTIVITY - IGRIDVIEW
+        Button btn_gridview = findViewById(R.id.btn_gridview);
+        btn_gridview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, activity_gridview.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //MENU

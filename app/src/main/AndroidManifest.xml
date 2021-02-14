@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmptyActivityExample">
+        <activity android:name=".activity_gridview"></activity>
         <activity android:name=".IntentGetActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -19,8 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".FormFieldsActivity" />
-        <activity android:name=".IntentUsageActivity">
-        </activity>
+        <activity android:name=".IntentUsageActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
