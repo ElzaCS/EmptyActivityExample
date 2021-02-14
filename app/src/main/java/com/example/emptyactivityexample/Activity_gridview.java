@@ -2,17 +2,13 @@ package com.example.emptyactivityexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.GridView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-public class activity_gridview extends AppCompatActivity {
+public class Activity_gridview extends AppCompatActivity {
     GridView gridView;
 
     String[] numberWord = {"One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"};
@@ -26,7 +22,7 @@ public class activity_gridview extends AppCompatActivity {
 
         gridView = findViewById(R.id.grid_view);
 
-        MainAdapter adapter = new MainAdapter(activity_gridview.this, numberWord, numberImage);
+        GridAdapter adapter = new GridAdapter(Activity_gridview.this, numberWord, numberImage);
         gridView.setAdapter(adapter);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

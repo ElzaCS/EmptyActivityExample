@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EmptyActivityExample">
         <activity android:name=".Activity_states"></activity>
-        <activity android:name=".activity_gridview" />
+        <activity android:name=".Activity_gridview" />
         <activity android:name=".IntentGetActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />

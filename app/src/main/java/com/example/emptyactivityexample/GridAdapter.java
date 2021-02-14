@@ -8,14 +8,14 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainAdapter extends BaseAdapter {
+public class GridAdapter extends BaseAdapter {
 
     private Context context;
     private LayoutInflater inflater;
     private String[] numberWord;
     private int[] numberImage;
 
-    public MainAdapter(Context c, String[] numberWord, int[] numberImage){
+    public GridAdapter(Context c, String[] numberWord, int[] numberImage){
         context = c;
         this.numberImage = numberImage;
         this.numberWord = numberWord;

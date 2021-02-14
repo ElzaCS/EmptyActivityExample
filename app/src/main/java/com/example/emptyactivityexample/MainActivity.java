@@ -2,8 +2,6 @@ package com.example.emptyactivityexample;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -61,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         btn_gridview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, activity_gridview.class);
+                Intent intent = new Intent(MainActivity.this, Activity_gridview.class);
                 startActivity(intent);
             }
         });
