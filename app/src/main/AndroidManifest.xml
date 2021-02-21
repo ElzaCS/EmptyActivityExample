@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmptyActivityExample">
-        <activity android:name=".Activity_fragments"></activity>
+        <activity android:name=".Activity_orientation"></activity>
+        <activity android:name=".Activity_fragments" />
         <activity android:name=".Activity_states" />
         <activity android:name=".Activity_gridview" />
         <activity android:name=".IntentGetActivity">

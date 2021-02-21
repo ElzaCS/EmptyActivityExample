@@ -81,6 +81,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //ACTIVITY - ORIENTATION
+        Button btn_orient = findViewById(R.id.btn_orientation);
+        btn_orient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Activity_orientation.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //MENU
