@@ -62,4 +62,15 @@
         app:layout_constraintStart_toEndOf="@+id/btn_intents"
         app:layout_constraintTop_toBottomOf="@+id/btn_gridview" />
 
+    <Button
+        android:id="@+id/btn_fragments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="76dp"
+        android:text="Fragments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_intents" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

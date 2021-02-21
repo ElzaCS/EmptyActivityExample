@@ -9,15 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmptyActivityExample">
-        <activity android:name=".Activity_states"></activity>
+        <activity android:name=".Activity_fragments"></activity>
+        <activity android:name=".Activity_states" />
         <activity android:name=".Activity_gridview" />
         <activity android:name=".IntentGetActivity">
             <intent-filter>
+
+                <!-- IMPLICIT INTENTS -->
                 <action android:name="android.intent.action.SEND" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-
                 <data android:mimeType="text/plain" />
+
+                <!-- REFER THIS ACTIVITY AS COMPONENT IN ANOTHER APP -->
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+                <!-- <action android:name="com.example.emptyactivityexample.IntentGetActivity" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".FormFieldsActivity" />

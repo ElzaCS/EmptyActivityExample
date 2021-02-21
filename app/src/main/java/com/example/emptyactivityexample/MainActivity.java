@@ -72,6 +72,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //ACTIVITY - FRAGMENTS
+        Button btn_fragments = findViewById(R.id.btn_fragments);
+        btn_fragments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Activity_fragments.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //MENU
