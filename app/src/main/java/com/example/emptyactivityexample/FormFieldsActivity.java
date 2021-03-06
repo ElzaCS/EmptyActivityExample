@@ -64,6 +64,11 @@ public class FormFieldsActivity extends AppCompatActivity implements View.OnClic
         recyclerView.setAdapter(langaugeAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        //for horizontal recyclerview
+//        LinearLayoutManager layoutManager
+//                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+//        recyclerView.setLayoutManager(layoutManager);
+
         //2nd ACTIVITY
         Button btn_click = findViewById(R.id.btn_back);
         btn_click.setOnClickListener(this);
