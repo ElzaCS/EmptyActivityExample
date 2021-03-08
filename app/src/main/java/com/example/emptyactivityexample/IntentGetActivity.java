@@ -19,7 +19,7 @@ public class IntentGetActivity extends AppCompatActivity {
         String message;
         if (action.equals(Intent.ACTION_SEND) && type != null){
             if ("text/plain".equals(type)) {
-                message = intent.getStringExtra(Intent.EXTRA_TEXT);
+                message = intent.getStringExtra(Intent.EXTRA_TEXT)+intent.getStringExtra(IntentUsageActivity.EXTRA_TEXT2);
                 Toast.makeText(IntentGetActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         }

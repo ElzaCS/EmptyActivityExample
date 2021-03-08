@@ -61,15 +61,19 @@ public class SecondFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_second, container, false);
+
+        String msg1 = mParam1;
+        String msg2 = mParam2;
+
         Button btn_hi = view.findViewById(R.id.btn_secondHi);
         btn_hi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Button btn_hi = v.findViewById(R.id.btn_secondHi);
-                if (btn_hi.getText().equals("Hi"))
-                    btn_hi.setText("Heyy");
+                if (btn_hi.getText().equals(msg1))
+                    btn_hi.setText(msg2);
                 else
-                    btn_hi.setText("Hi");
+                    btn_hi.setText(msg1);
             }
         });
         return view;

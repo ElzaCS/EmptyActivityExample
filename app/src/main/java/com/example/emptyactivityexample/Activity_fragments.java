@@ -40,12 +40,12 @@ public class Activity_fragments extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.btn_fragment1:
-                setFragment(new FirstFragment());
+                setFragment(FirstFragment.newInstance("hello from ", "first fragment"));
                 Toast.makeText(Activity_fragments.this, "First", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.btn_fragment2:
-                setFragment(new SecondFragment());
+                setFragment(SecondFragment.newInstance("hello from", "second fragment"));
                 break;
         }
     }

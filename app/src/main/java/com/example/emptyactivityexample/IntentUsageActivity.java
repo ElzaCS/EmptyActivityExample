@@ -9,7 +9,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class IntentUsageActivity extends AppCompatActivity implements View.OnClickListener {
-    final String message = "I am learning intents";
+    final String message = "I am learning intents! ";
+
+    public static final String EXTRA_TEXT2 = "com.example.emptyactivityexample.EXTRA_TEXT2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ public class IntentUsageActivity extends AppCompatActivity implements View.OnCli
                 intent = new Intent();
                 intent.setAction(Intent.ACTION_SEND);
                 intent.putExtra(Intent.EXTRA_TEXT, message);
+                intent.putExtra(EXTRA_TEXT2, "second message");
                 intent.setType("text/plain");
                 if (intent.resolveActivity(getPackageManager()) != null)
                     startActivity(intent);
