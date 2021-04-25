@@ -1,23 +1,31 @@
 package com.example.emptyactivityexample.Intents;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.AlarmClock;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.emptyactivityexample.BuildConfig;
 import com.example.emptyactivityexample.MainActivity;
 import com.example.emptyactivityexample.R;
+
+import java.io.File;
 
 public class IntentUsageActivity extends AppCompatActivity implements View.OnClickListener {
     final String message = "I am learning intents! ";
     public static final int CAMERA_REQUEST = 1;
 
     public static final String EXTRA_TEXT2 = "com.example.emptyactivityexample.EXTRA_TEXT2";
+
+    public static final String YOUR_SONG_PATH = "/Download/Nightcore - River Flows In You (Yiruma).mp3";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +63,10 @@ public class IntentUsageActivity extends AppCompatActivity implements View.OnCli
         //ALARM
         Button btn_alarm = findViewById(R.id.btn_alarm);
         btn_alarm.setOnClickListener(this);
+
+        //MUSIC
+        Button btn_music = findViewById(R.id.btn_music);
+        btn_music.setOnClickListener(this);
 
         //BACK BUTTON
         Button btn_click = findViewById(R.id.btn_back_i);
@@ -125,6 +137,18 @@ public class IntentUsageActivity extends AppCompatActivity implements View.OnCli
                 intent = new Intent(AlarmClock.ACTION_SET_ALARM);
                 if (intent.resolveActivity(getPackageManager()) != null)
                     startActivity(intent);
+                break;
+
+            //MUSIC
+            case R.id.btn_music:
+                intent = new Intent(android.content.Intent.ACTION_VIEW);
+                File sdcard = Environment.getExternalStorageDirectory();
+                File audioFile = new File(sdcard.getPath() +  YOUR_SONG_PATH);
+                Log.e("Path",  sdcard.getPath() +  YOUR_SONG_PATH + "" );
+                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                Uri uri = FileProvider.getUriForFile(IntentUsageActivity.this, BuildConfig.APPLICATION_ID + ".provider",audioFile);
+                intent.setDataAndType(uri, "audio/*");
+                startActivity(intent);
                 break;
 
             //BACK BUTTON
