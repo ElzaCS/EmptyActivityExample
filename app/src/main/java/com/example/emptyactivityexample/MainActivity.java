@@ -99,6 +99,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //ACTIVITY - NOTIFICATION
+        Button btn_notif = findViewById(R.id.btn_notif);
+        btn_notif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //MENU

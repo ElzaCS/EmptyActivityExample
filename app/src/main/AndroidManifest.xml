@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmptyActivityExample">
-        <activity android:name=".DragActivity"></activity>
+        <activity android:name=".NotificationActivity"></activity>
+        <activity android:name=".DragActivity" />
         <activity android:name=".Activity_orientation" />
         <activity android:name=".Activity_fragments" />
         <activity android:name=".Activity_states" />
