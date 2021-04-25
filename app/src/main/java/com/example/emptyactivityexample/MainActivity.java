@@ -90,6 +90,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //ACTIVITY - DRAG
+        Button btn_drag = findViewById(R.id.btn_drag);
+        btn_drag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DragActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //MENU
