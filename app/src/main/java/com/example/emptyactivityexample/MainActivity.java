@@ -19,6 +19,7 @@ import com.example.emptyactivityexample.FormViews.FormFieldsActivity;
 import com.example.emptyactivityexample.Fragments.Activity_fragments;
 import com.example.emptyactivityexample.GridView.Activity_gridview;
 import com.example.emptyactivityexample.Intents.IntentUsageActivity;
+import com.example.emptyactivityexample.Preferences.PreferenceActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -110,6 +111,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
+        //ACTIVITY - PREFERENCES
+        Button btn_pref = findViewById(R.id.btn_pref);
+        btn_pref.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PreferenceActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.emptyactivityexample">
+    package="com.example.emptyactivityexample"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- this on top -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
@@ -11,7 +20,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmptyActivityExample">
-        <activity android:name=".NotificationActivity"></activity>
+        <activity android:name=".Preferences.ActivityPref"></activity>
+        <activity android:name=".Preferences.PreferenceActivity" />
+        <activity android:name=".NotificationActivity" />
         <activity android:name=".DragActivity" />
         <activity android:name=".Activity_orientation" />
         <activity android:name=".Fragments.Activity_fragments" />
