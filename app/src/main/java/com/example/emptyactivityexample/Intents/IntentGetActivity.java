@@ -1,10 +1,12 @@
-package com.example.emptyactivityexample;
+package com.example.emptyactivityexample.Intents;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.example.emptyactivityexample.R;
 
 public class IntentGetActivity extends AppCompatActivity {
 

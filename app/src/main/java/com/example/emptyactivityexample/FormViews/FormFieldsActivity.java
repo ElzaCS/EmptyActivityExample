@@ -1,4 +1,4 @@
-package com.example.emptyactivityexample;
+package com.example.emptyactivityexample.FormViews;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +15,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.emptyactivityexample.MainActivity;
+import com.example.emptyactivityexample.R;
 
 public class FormFieldsActivity extends AppCompatActivity implements View.OnClickListener {
 

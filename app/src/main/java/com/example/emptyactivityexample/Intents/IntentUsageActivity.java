@@ -1,4 +1,4 @@
-package com.example.emptyactivityexample;
+package com.example.emptyactivityexample.Intents;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.provider.AlarmClock;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.emptyactivityexample.MainActivity;
+import com.example.emptyactivityexample.R;
 
 public class IntentUsageActivity extends AppCompatActivity implements View.OnClickListener {
     final String message = "I am learning intents! ";
@@ -94,7 +97,7 @@ public class IntentUsageActivity extends AppCompatActivity implements View.OnCli
 
             //VIEW INTENTS
             case R.id.btn_viewIntents:
-                intent = new Intent("com.example.emptyactivityexample.IntentGetActivity");
+                intent = new Intent("com.example.emptyactivityexample.Intents.IntentGetActivity");
                 startActivity(intent);
                 break;
 

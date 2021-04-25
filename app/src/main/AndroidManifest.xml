@@ -14,10 +14,10 @@
         <activity android:name=".NotificationActivity"></activity>
         <activity android:name=".DragActivity" />
         <activity android:name=".Activity_orientation" />
-        <activity android:name=".Activity_fragments" />
+        <activity android:name=".Fragments.Activity_fragments" />
         <activity android:name=".Activity_states" />
-        <activity android:name=".Activity_gridview" />
-        <activity android:name=".IntentGetActivity">
+        <activity android:name=".GridView.Activity_gridview" />
+        <activity android:name=".Intents.IntentGetActivity">
             <intent-filter>
 
                 <!-- IMPLICIT INTENTS -->
@@ -27,13 +27,13 @@
 
                 <!-- REFER THIS ACTIVITY AS COMPONENT IN ANOTHER APP -->
                 <!-- <action android:name="android.intent.action.VIEW" /> -->
-                <!-- <action android:name="com.example.emptyactivityexample.IntentGetActivity" /> -->
+                <!-- <action android:name="com.example.emptyactivityexample.Intents.IntentGetActivity" /> -->
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".FormFieldsActivity" />
-        <activity android:name=".IntentUsageActivity" />
+        <activity android:name=".FormViews.FormFieldsActivity" />
+        <activity android:name=".Intents.IntentUsageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,7 +42,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".ExampleAppWidgetProvider">
+        <receiver android:name=".Widget.ExampleAppWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -52,7 +52,7 @@
                 android:resource="@xml/example_appwidget_info" />
         </receiver>
 
-        <activity android:name=".ExampleAppWidgetConfig">
+        <activity android:name=".Widget.ExampleAppWidgetConfig">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>

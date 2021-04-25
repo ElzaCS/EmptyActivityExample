@@ -1,4 +1,4 @@
-package com.example.emptyactivityexample;
+package com.example.emptyactivityexample.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
+
+import com.example.emptyactivityexample.R;
 
 public class Activity_gridview extends AppCompatActivity {
     GridView gridView;

@@ -1,4 +1,4 @@
-package com.example.emptyactivityexample;
+package com.example.emptyactivityexample.Fragments;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.emptyactivityexample.R;
 
 public class Activity_fragments extends AppCompatActivity implements View.OnClickListener {
 

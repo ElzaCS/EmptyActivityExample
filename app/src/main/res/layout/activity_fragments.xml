@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_fragments">
+    tools:context=".Fragments.Activity_fragments">
 
     <Button
         android:id="@+id/btn_fragment1"
@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_fragment1" />
-    <!--        android:name="com.example.emptyactivityexample.FirstFragment"-->
+    <!--        android:name="com.example.emptyactivityexample.Fragments.FirstFragment"-->
 
     <TextView
         android:id="@+id/textView2"

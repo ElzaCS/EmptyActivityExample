@@ -1,4 +1,4 @@
-package com.example.emptyactivityexample;
+package com.example.emptyactivityexample.Widget;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.widget.EditText;
 import android.widget.RemoteViews;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.emptyactivityexample.MainActivity;
+import com.example.emptyactivityexample.R;
 
 public class ExampleAppWidgetConfig extends AppCompatActivity {
     public static final String SHARED_PREFS = "prefs";

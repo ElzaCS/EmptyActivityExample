@@ -1,4 +1,4 @@
-package com.example.emptyactivityexample;
+package com.example.emptyactivityexample.Widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -8,8 +8,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.widget.RemoteViews;
 
-import static com.example.emptyactivityexample.ExampleAppWidgetConfig.KEY_BUTTON_TEXT;
-import static com.example.emptyactivityexample.ExampleAppWidgetConfig.SHARED_PREFS;
+import com.example.emptyactivityexample.MainActivity;
+import com.example.emptyactivityexample.R;
+
+import static com.example.emptyactivityexample.Widget.ExampleAppWidgetConfig.KEY_BUTTON_TEXT;
+import static com.example.emptyactivityexample.Widget.ExampleAppWidgetConfig.SHARED_PREFS;
 
 
 public class ExampleAppWidgetProvider extends AppWidgetProvider {
