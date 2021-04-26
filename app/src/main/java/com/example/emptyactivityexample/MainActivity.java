@@ -1,6 +1,7 @@
 package com.example.emptyactivityexample;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -8,10 +9,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -121,6 +124,32 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PreferenceActivity.class);
                 startActivity(intent);
+            }
+        });
+        //ACTIVITY - CUSTOM DIALOG
+        Button btn_dialog = findViewById(R.id.btn_dialog);
+        btn_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ViewGroup viewGroup = findViewById(android.R.id.content);
+                //then we will inflate the custom alert dialog xml that we created
+                View dialogView = LayoutInflater.from(MainActivity.this).inflate(R.layout.my_dialog, viewGroup, false);
+                //Now we need an AlertDialog.Builder object
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                //setting the view of the builder to our custom view that we already inflated
+                builder.setView(dialogView);
+                //finally creating the alert dialog and displaying it
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+                Button btn_ok = dialogView.findViewById(R.id.buttonOk);
+                btn_ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getApplicationContext(), "Clicked ok", Toast.LENGTH_SHORT).show();
+                        alertDialog.dismiss();
+                    }
+                });
             }
         });
     }

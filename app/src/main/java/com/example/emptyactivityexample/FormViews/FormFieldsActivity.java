@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -72,6 +73,10 @@ public class FormFieldsActivity extends AppCompatActivity implements View.OnClic
 //                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
 //        recyclerView.setLayoutManager(layoutManager);
 
+        //RADIO GROUP
+        Button btn_radio = findViewById(R.id.btn_radio);
+        btn_radio.setOnClickListener(this);
+
         //2nd ACTIVITY
         Button btn_click = findViewById(R.id.btn_back);
         btn_click.setOnClickListener(this);
@@ -98,6 +103,23 @@ public class FormFieldsActivity extends AppCompatActivity implements View.OnClic
             case R.id.btn_plus:
                 TextView txtview_num = findViewById(R.id.plain_num);
                 txtview_num.setText(String.valueOf(Integer.parseInt(txtview_num.getText().toString()) + 1));
+                break;
+
+            //RADIO GROUP
+            case R.id.btn_radio:
+                RadioGroup radioGroup_action = findViewById(R.id.radioGroup);
+                int selectedId = radioGroup_action.getCheckedRadioButtonId();
+                switch (selectedId){
+                    case R.id.radioAlarm:
+                        Toast.makeText(getApplicationContext(), "You clicked Alarm!", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.radioMusic:
+                        Toast.makeText(getApplicationContext(), "You clicked Music!", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.radioMail:
+                        Toast.makeText(getApplicationContext(), "You clicked Mail!", Toast.LENGTH_SHORT).show();
+                        break;
+                }
                 break;
 
             //2nd ACTIVITY
