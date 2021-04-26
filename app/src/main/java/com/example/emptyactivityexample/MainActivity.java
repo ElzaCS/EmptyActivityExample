@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,6 +17,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.emptyactivityexample.FormViews.FormFieldsActivity;
@@ -150,6 +153,25 @@ public class MainActivity extends AppCompatActivity {
                         alertDialog.dismiss();
                     }
                 });
+            }
+        });
+
+        //ACTIVITY - CUSTOM TOAST
+        Button btn_toast = findViewById(R.id.btn_toast);
+        btn_toast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LayoutInflater inflater = getLayoutInflater();
+                View layout = inflater.inflate(R.layout.my_toast, (ViewGroup) findViewById(R.id.toast_root));
+                TextView toastText = layout.findViewById(R.id.toast_text);
+                ImageView toastImage = layout.findViewById(R.id.toast_image);
+                toastText.setText("This is a different text");
+                toastImage.setImageResource(R.drawable.ic_outline_sentiment_satisfied_24);
+                Toast toast = new Toast(getApplicationContext());
+                toast.setGravity(Gravity.BOTTOM, 0, 0); //or Gravity.CENTER
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setView(layout);
+                toast.show();
             }
         });
     }
