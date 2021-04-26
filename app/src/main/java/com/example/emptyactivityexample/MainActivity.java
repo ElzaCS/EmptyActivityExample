@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -134,6 +135,29 @@ public class MainActivity extends AppCompatActivity {
         btn_dialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*//------- Normal Dialog ----------------
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+                builder1.setMessage("Write your message here.");
+                builder1.setCancelable(true);
+                builder1.setPositiveButton(
+                        "Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                builder1.setNegativeButton(
+                        "No",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alert11 = builder1.create();
+                alert11.show();*/
+
+                //------- Custom Dialog --------------
                 ViewGroup viewGroup = findViewById(android.R.id.content);
                 //then we will inflate the custom alert dialog xml that we created
                 View dialogView = LayoutInflater.from(MainActivity.this).inflate(R.layout.my_dialog, viewGroup, false);
@@ -144,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
                 //finally creating the alert dialog and displaying it
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
-
                 Button btn_ok = dialogView.findViewById(R.id.buttonOk);
                 btn_ok.setOnClickListener(new View.OnClickListener() {
                     @Override
