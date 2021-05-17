@@ -9,6 +9,9 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <!-- record video-->
+    <uses-feature
+        android:name="android.hardware.camera2" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -17,8 +20,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmptyActivityExample">
-        <activity android:name=".Features.VideoPlayerActivity"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Features.VideoRecordActivity" android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".Features.VideoPlayerActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Features.AudioPlayerActivity"
             android:parentActivityName=".MainActivity" />

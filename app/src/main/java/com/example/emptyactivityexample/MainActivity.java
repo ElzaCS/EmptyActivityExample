@@ -28,6 +28,7 @@ import android.widget.Toast;
 import com.example.emptyactivityexample.Features.AudioPlayerActivity;
 import com.example.emptyactivityexample.Features.DragActivity;
 import com.example.emptyactivityexample.Features.VideoPlayerActivity;
+import com.example.emptyactivityexample.Features.VideoRecordActivity;
 import com.example.emptyactivityexample.FormViews.FormFieldsActivity;
 import com.example.emptyactivityexample.Fragments.Activity_fragments;
 import com.example.emptyactivityexample.GridView.Activity_gridview;
@@ -133,6 +134,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, VideoPlayerActivity.class);
+                startActivity(intent);
+            }
+        });
+        //ACTIVITY - RECORD VIDEO
+        Button btn_recVideo = findViewById(R.id.btn_video_rec);
+        btn_recVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, VideoRecordActivity.class);
                 startActivity(intent);
             }
         });
