@@ -216,12 +216,13 @@
             android:layout_weight="1"
             android:text="Audio" />
         <Button
-            android:id="@+id/btn_sms"
+            android:id="@+id/btn_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="SMS" />
+            android:text="Photo"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -249,6 +250,13 @@
             android:layout_weight="1"
             android:text="Record video"
              />
+        <Button
+            android:id="@+id/btn_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="SMS" />
     </LinearLayout>
 
 

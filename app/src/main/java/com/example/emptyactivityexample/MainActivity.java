@@ -146,6 +146,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //ACTIVITY - CAMERA
+        Button btn_camera = findViewById(R.id.btn_camera);
+        btn_camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+                startActivity(intent);
+            }
+        });
         //ACTIVITY - SMS
         Button btn_sms = findViewById(R.id.btn_sms);
         btn_sms.setOnClickListener(new View.OnClickListener() {
