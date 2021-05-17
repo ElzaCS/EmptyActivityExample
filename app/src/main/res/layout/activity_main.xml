@@ -192,11 +192,12 @@
         app:layout_constraintTop_toBottomOf="@+id/Appearance" />
 
     <LinearLayout
+        android:id="@+id/features1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        android:weightSum="2"
+        android:weightSum="3"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         tools:layout_editor_absoluteX="1dp">
 
@@ -214,7 +215,36 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="Audio" />
+        <Button
+            android:id="@+id/btn_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="SMS" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/features2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@+id/features1"
+        tools:layout_editor_absoluteX="1dp">
+
+        <Button
+            android:id="@+id/btn_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Video"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="603dp" />
+    </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

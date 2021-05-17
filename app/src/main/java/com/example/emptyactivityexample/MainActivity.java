@@ -4,10 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -23,6 +27,7 @@ import android.widget.Toast;
 
 import com.example.emptyactivityexample.Features.AudioPlayerActivity;
 import com.example.emptyactivityexample.Features.DragActivity;
+import com.example.emptyactivityexample.Features.VideoPlayerActivity;
 import com.example.emptyactivityexample.FormViews.FormFieldsActivity;
 import com.example.emptyactivityexample.Fragments.Activity_fragments;
 import com.example.emptyactivityexample.GridView.Activity_gridview;
@@ -113,12 +118,45 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //ACTIVITY - AUDIO
         Button btn_audio = findViewById(R.id.btn_audio);
         btn_audio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AudioPlayerActivity.class);
                 startActivity(intent);
+            }
+        });
+        //ACTIVITY - VIDEO
+        Button btn_video = findViewById(R.id.btn_video);
+        btn_video.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, VideoPlayerActivity.class);
+                startActivity(intent);
+            }
+        });
+        //ACTIVITY - SMS
+        Button btn_sms = findViewById(R.id.btn_sms);
+        btn_sms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M)   {
+                    if(checkSelfPermission(Manifest.permission.SEND_SMS)== PackageManager.PERMISSION_GRANTED)    {
+                        try      {
+                            SmsManager sms = SmsManager.getDefault();
+                            sms.sendTextMessage("<PhoneNo>", null, "SMS test message", null, null);
+                            Toast.makeText(getApplicationContext(), "Message Sent successfully!",
+                                    Toast.LENGTH_LONG).show();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Failed to send Message",  Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    else   {
+                        requestPermissions(new String[]{Manifest.permission.SEND_SMS},1);
+                    }
+                }
             }
         });
         //ACTIVITY - NOTIFICATION
