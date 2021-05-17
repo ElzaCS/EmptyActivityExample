@@ -18,125 +18,203 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_outline_sentiment_satisfied_24" />
 
-    <Button
-        android:id="@+id/btn_forms"
+
+    <TextView
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="50dp"
-        android:text="Forms"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Basics"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    <LinearLayout
+        android:id="@+id/Basics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        tools:layout_editor_absoluteX="0dp">
 
-    <Button
-        android:id="@+id/btn_intents"
+        <Button
+            android:id="@+id/btn_forms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Forms" />
+
+        <Button
+            android:id="@+id/btn_intents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Intents" />
+        <Button
+            android:id="@+id/btn_fragments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragments"
+            android:layout_margin="10dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="50dp"
-        android:text="Intents"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Custom"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_forms" />
+        app:layout_constraintTop_toBottomOf="@+id/Basics" />
 
-    <Button
-        android:id="@+id/btn_gridview"
+    <LinearLayout
+        android:id="@+id/Custom1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        tools:layout_editor_absoluteX="1dp">
+
+        <Button
+            android:id="@+id/btn_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CustomDialog"
+            android:layout_margin="10dp"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="657dp" />
+
+        <Button
+            android:id="@+id/btn_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CustomToast"
+            android:layout_margin="10dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="644dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Custom2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/Custom1">
+
+        <Button
+            android:id="@+id/btn_notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Notification"
+            android:layout_margin="10dp"
+             />
+        <Button
+            android:id="@+id/btn_states"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="States"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            tools:layout_editor_absoluteX="306dp"
+            tools:layout_editor_absoluteY="556dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="GridVIew"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toEndOf="@+id/btn_forms"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Button
-        android:id="@+id/btn_states"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="States"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toEndOf="@+id/btn_intents"
-        app:layout_constraintTop_toBottomOf="@+id/btn_gridview" />
-
-    <Button
-        android:id="@+id/btn_fragments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="50dp"
-        android:text="Fragments"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Appearance"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_intents" />
+        app:layout_constraintTop_toBottomOf="@+id/Custom2" />
 
-    <Button
-        android:id="@+id/btn_orientation"
+    <LinearLayout
+        android:id="@+id/Appearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:layout_editor_absoluteX="1dp">
+        <Button
+            android:id="@+id/btn_gridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="GridVIew"
+            />
+        <Button
+            android:id="@+id/btn_pref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prefs"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+             />
+        <Button
+            android:id="@+id/btn_orientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orientation"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+             />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Orientation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toEndOf="@+id/btn_fragments"
-        app:layout_constraintTop_toBottomOf="@+id/btn_states" />
-
-    <Button
-        android:id="@+id/btn_drag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="50dp"
-        android:text="Drag"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Features"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_fragments" />
+        app:layout_constraintTop_toBottomOf="@+id/Appearance" />
 
-    <Button
-        android:id="@+id/btn_notif"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:text="Notification"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_orientation" />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        tools:layout_editor_absoluteX="1dp">
 
-    <Button
-        android:id="@+id/btn_pref"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:text="Preferences"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_drag" />
+        <Button
+            android:id="@+id/btn_drag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Drag" />
+        <Button
+            android:id="@+id/btn_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Audio" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:text="CustomDialog"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_notif" />
-
-    <Button
-        android:id="@+id/btn_toast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:text="CustomTOast"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_pref" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

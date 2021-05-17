@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.emptyactivityexample"
-    xmlns:tools="http://schemas.android.com/tools">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.emptyactivityexample">
     <!-- this on top -->
     <uses-permission
         android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
-
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <application
@@ -20,15 +17,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmptyActivityExample">
-        <activity android:name=".Preferences.ActivityPref"></activity>
-        <activity android:name=".Preferences.PreferenceActivity" />
-        <activity android:name=".NotificationActivity" />
-        <activity android:name=".DragActivity" />
-        <activity android:name=".Activity_orientation" />
-        <activity android:name=".Fragments.Activity_fragments" />
-        <activity android:name=".Activity_states" />
-        <activity android:name=".GridView.Activity_gridview" />
-        <activity android:name=".Intents.IntentGetActivity">
+        <activity android:name=".AudioPlayerActivity" android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".Preferences.ActivityPref"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Preferences.PreferenceActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".NotificationActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DragActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Activity_orientation"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Fragments.Activity_fragments"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Activity_states"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".GridView.Activity_gridview"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Intents.IntentGetActivity"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
 
                 <!-- IMPLICIT INTENTS -->
@@ -43,8 +59,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".FormViews.FormFieldsActivity" />
-        <activity android:name=".Intents.IntentUsageActivity" />
+        <activity
+            android:name=".FormViews.FormFieldsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Intents.IntentUsageActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,7 +73,9 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".Widget.ExampleAppWidgetProvider">
+        <receiver
+            android:name=".Widget.ExampleAppWidgetProvider"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -63,13 +85,13 @@
                 android:resource="@xml/example_appwidget_info" />
         </receiver>
 
-        <activity android:name=".Widget.ExampleAppWidgetConfig">
+        <activity
+            android:name=".Widget.ExampleAppWidgetConfig"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
-        </activity>
-
-        <!-- MUSIC -->
+        </activity> <!-- MUSIC -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
