@@ -242,6 +242,15 @@
             android:text="Video"
             tools:layout_editor_absoluteX="28dp"
             tools:layout_editor_absoluteY="603dp" />
+        <Button
+            android:id="@+id/btn_rec_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Record"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="603dp" />
     </LinearLayout>
 
 

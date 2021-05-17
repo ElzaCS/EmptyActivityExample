@@ -136,6 +136,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //ACTIVITY - RECORD AUDIO
+        Button btn_rec_audio = findViewById(R.id.btn_rec_audio);
+        btn_rec_audio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AudioRecordActivity.class);
+                startActivity(intent);
+            }
+        });
         //ACTIVITY - SMS
         Button btn_sms = findViewById(R.id.btn_sms);
         btn_sms.setOnClickListener(new View.OnClickListener() {
