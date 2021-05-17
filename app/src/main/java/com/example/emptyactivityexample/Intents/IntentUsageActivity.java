@@ -68,6 +68,10 @@ public class IntentUsageActivity extends AppCompatActivity implements View.OnCli
         Button btn_music = findViewById(R.id.btn_music);
         btn_music.setOnClickListener(this);
 
+        //EMAIL
+        Button btn_email = findViewById(R.id.btn_email);
+        btn_email.setOnClickListener(this);
+
         //BACK BUTTON
         Button btn_click = findViewById(R.id.btn_back_i);
         btn_click.setOnClickListener(this);
@@ -151,10 +155,21 @@ public class IntentUsageActivity extends AppCompatActivity implements View.OnCli
                 startActivity(intent);
                 break;
 
+            //EMAIL
+            case R.id.btn_email:
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.putExtra(Intent.EXTRA_EMAIL, new String[]{ "anuejohn@gmail.com"});
+                email.putExtra(Intent.EXTRA_SUBJECT, "Test email subject");
+                email.putExtra(Intent.EXTRA_TEXT, "Test email body");
+                email.setType("message/rfc822");
+                startActivity(Intent.createChooser(email, "Choose an Email client :"));
+                break;
+
             //BACK BUTTON
-            case R.id.btn_back:
+            case R.id.btn_back_i:
                 intent = new Intent(IntentUsageActivity.this, MainActivity.class);
                 startActivity(intent);
+                break;
 
             default:
                 throw new IllegalStateException("Unexpected value: "+ v.getId());

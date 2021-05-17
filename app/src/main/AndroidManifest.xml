@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmptyActivityExample">
-        <activity android:name=".AudioPlayerActivity" android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".Features.AudioPlayerActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Preferences.ActivityPref"
             android:parentActivityName=".MainActivity" />
@@ -28,7 +30,7 @@
             android:name=".NotificationActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".DragActivity"
+            android:name=".Features.DragActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Activity_orientation"

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -22,6 +21,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.emptyactivityexample.Features.AudioPlayerActivity;
+import com.example.emptyactivityexample.Features.DragActivity;
 import com.example.emptyactivityexample.FormViews.FormFieldsActivity;
 import com.example.emptyactivityexample.Fragments.Activity_fragments;
 import com.example.emptyactivityexample.GridView.Activity_gridview;
