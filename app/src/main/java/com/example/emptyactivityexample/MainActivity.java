@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.emptyactivityexample.Features.AudioPlayerActivity;
+import com.example.emptyactivityexample.Features.CameraActivity;
 import com.example.emptyactivityexample.Features.DragActivity;
 import com.example.emptyactivityexample.Features.VideoPlayerActivity;
 import com.example.emptyactivityexample.Features.VideoRecordActivity;
